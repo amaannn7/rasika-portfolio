@@ -299,7 +299,7 @@ export default function Home() {
 
       {/* â”€â”€ NAVBAR â”€â”€ */}
       <nav className={`${softRevealClass} fixed top-0 inset-x-0 z-50 h-14 border-b border-[#eeeeee] bg-white/88 backdrop-blur-md`} style={revealStyle(60, 1000)}>
-        <div className="max-w-5xl mx-auto px-8 h-full flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 h-full flex items-center justify-between gap-3">
 
           {/* Left links */}
           <div className="flex-1 hidden md:flex items-center gap-7">
@@ -315,26 +315,26 @@ export default function Home() {
           </div>
 
           {/* Center mark */}
-          <div className="flex flex-col items-center">
+          <div className="flex shrink-0 flex-col items-center">
             <div
               className="flex items-center justify-center mb-0.5"
               style={{ width: 30, height: 30, border: "1.5px solid #111" }}
             >
               <span className="text-[11px] font-bold tracking-tight">R</span>
             </div>
-            <span className="text-[8px] font-bold tracking-[0.18em] uppercase text-[#111]">
+            <span className="text-center text-[7px] font-bold tracking-[0.14em] uppercase text-[#111] min-[420px]:text-[8px] min-[420px]:tracking-[0.18em]">
               RASIKA KEKULAWELA
             </span>
           </div>
 
           {/* Right icons */}
-          <div className="flex-1 flex items-center justify-end gap-3">
+          <div className="flex-1 flex items-center justify-end gap-2 sm:gap-3">
             <a
               href={linkedInUrl}
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className={`${linkPillClass} hidden min-[560px]:inline-flex text-[#111]`}
+              className="hidden items-center gap-2.5 rounded-full border border-black/10 bg-transparent px-4 py-2.5 text-[#111] transition duration-300 hover:border-black hover:bg-black hover:text-white md:inline-flex"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M4.98 3.5A1.49 1.49 0 1 1 5 6.48 1.49 1.49 0 0 1 4.98 3.5ZM3.5 8h3V20h-3V8Zm5 0h2.88v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V20h-3v-6.02c0-1.44-.02-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2V20h-3V8Z" />
@@ -346,18 +346,18 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className={`${iconButtonClass} text-[#111] min-[560px]:hidden`}
+              className={`${iconButtonClass} h-9 w-9 text-[#111] md:hidden sm:h-10 sm:w-10`}
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M4.98 3.5A1.49 1.49 0 1 1 5 6.48 1.49 1.49 0 0 1 4.98 3.5ZM3.5 8h3V20h-3V8Zm5 0h2.88v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V20h-3v-6.02c0-1.44-.02-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2V20h-3V8Z" />
               </svg>
             </a>
-            <a href="mailto:rasikekulawela@gmail.com" aria-label="Email" className={`${iconButtonClass} text-[#111]`}>
+            <a href="mailto:rasikekulawela@gmail.com" aria-label="Email" className={`${iconButtonClass} h-9 w-9 text-[#111] sm:h-10 sm:w-10`}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="4" width="20" height="16" rx="2" /><path d="M2 7l10 7 10-7" />
               </svg>
             </a>
-            <a href="tel:+94777284911" aria-label="Phone" className={`${iconButtonClass} text-[#111]`}>
+            <a href="tel:+94777284911" aria-label="Phone" className={`${iconButtonClass} h-9 w-9 text-[#111] sm:h-10 sm:w-10`}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.22 4.71 2 2 0 012.2 2.5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.56-1.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
               </svg>
@@ -371,12 +371,12 @@ export default function Home() {
       <section id="about" className="pt-14">
 
         {/* Large serif heading — centered */}
-        <div className={`${revealClass} max-w-5xl mx-auto px-8 pt-16 pb-10 text-center`} style={revealStyle(120)}>
+        <div className={`${revealClass} max-w-4xl mx-auto px-5 sm:px-8 pt-12 sm:pt-16 pb-6 sm:pb-10 text-center`} style={revealStyle(120)}>
           <h1
             style={{
               fontFamily: "var(--font-playfair), Georgia, 'Times New Roman', serif",
               fontWeight: 600,
-              fontSize: "clamp(1.7rem, 4vw, 2.9rem)",
+              fontSize: "clamp(1.45rem, 6.2vw, 2.9rem)",
               lineHeight: 1.2,
               color: "#111",
             }}
@@ -384,9 +384,7 @@ export default function Home() {
             <TypewriterHeading lines={heroHeadlineLines} />
           </h1>
         </div>
-
-        {/* 3-col: bio/contact/services | oval photo | stats */}
-        <div className="mx-auto max-w-[72rem] px-8 pb-16">
+        <div className="mx-auto max-w-[72rem] px-5 sm:px-8 pb-16">
 
           {/* Desktop */}
           <div
@@ -492,32 +490,27 @@ export default function Home() {
           </div>
 
           {/* Mobile */}
-          <div className={`${revealClass} md:hidden space-y-6 min-[600px]:grid min-[600px]:grid-cols-[220px_minmax(0,1fr)] min-[600px]:items-center min-[600px]:gap-x-8 min-[600px]:gap-y-6 min-[600px]:space-y-0`} style={revealStyle(160)}>
-            <div
-              className="mx-auto min-[600px]:mx-0"
-              style={{
-                width: "220px",
-              }}
-            >
+          <div className={`${revealClass} md:hidden space-y-8`} style={revealStyle(160)}>
+            <div className="mx-auto w-[240px]">
               <div
                 className="outline outline-1 outline-black/8"
                 style={{
-                  width: "220px",
-                  height: "300px",
+                  width: "240px",
+                  height: "320px",
                   borderRadius: "9999px",
                   overflow: "hidden",
                   position: "relative",
                   backgroundColor: "#f0f0f0",
                 }}
               >
-                <Image src="/profile-picture-1.png" alt="Rasika Nilnuwan Kekulawela" fill sizes="220px" className="object-cover object-top" priority />
+                <Image src="/profile-picture-1.png" alt="Rasika Nilnuwan Kekulawela" fill sizes="240px" className="object-cover object-top" priority />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-6 min-[600px]:self-center">
+            <div className="grid grid-cols-1 gap-x-4 gap-y-5 min-[460px]:grid-cols-2 sm:gap-x-5 sm:gap-y-6">
               {heroStats.map((s, index) => (
-                <div key={s.label} className={`${statClass} ${revealClass} ${index < 2 ? "border-t-0 pt-0" : ""}`} style={revealStyle(220 + index * 90)}>
+                <div key={s.label} className={`${statClass} ${revealClass} ${index === 0 ? "border-t-0 pt-0" : ""}`} style={revealStyle(220 + index * 90)}>
                   <p className="text-[#999] text-[9px] uppercase tracking-[0.2em] mb-1">{s.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 600, color: "#111" }}>
+                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.9rem", fontWeight: 600, color: "#111" }}>
                     <AnimatedStatValue
                       value={s.value}
                       prefix={s.prefix}
@@ -528,16 +521,31 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="space-y-1 border-t border-[#e9e6df] pt-5 text-[13px] text-[#555] min-[600px]:col-span-2">
+            <div className="space-y-1 border-t border-[#e9e6df] pt-5 text-[13px] text-[#555]">
               <p>Colombo 5, Sri Lanka</p>
               <a href="mailto:rasikekulawela@gmail.com" className="block">rasikekulawela@gmail.com</a>
               <a href="tel:+94777284911" className="block">+94 777 284 911</a>
-              <a href={linkedInUrl} target="_blank" rel="noreferrer" className={`${linkPillClass} mt-3 text-[#111]`}>
+              <a href={linkedInUrl} target="_blank" rel="noreferrer" className={`${linkPillClass} mt-3 w-full justify-center text-[#111] min-[420px]:w-auto`}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M4.98 3.5A1.49 1.49 0 1 1 5 6.48 1.49 1.49 0 0 1 4.98 3.5ZM3.5 8h3V20h-3V8Zm5 0h2.88v1.64h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V20h-3v-6.02c0-1.44-.02-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2V20h-3V8Z" />
                 </svg>
                 <span className="text-[11px] font-semibold uppercase tracking-[0.14em]">LinkedIn Profile</span>
               </a>
+            </div>
+            <div className="border-t border-[#e9e6df] pt-5">
+              <p className="mb-3 text-[#999] uppercase tracking-[0.2em]" style={{ fontSize: "9px" }}>Biography</p>
+              <p className="text-[13px] leading-relaxed text-[#555]">
+                Rasika is a business banking professional focused on long-term client relationships, SME portfolio growth, and practical financial solutions.
+              </p>
+            </div>
+            <div className="border-t border-[#e9e6df] pt-5">
+              <p className="mb-3 text-[#999] uppercase tracking-[0.2em]" style={{ fontSize: "9px" }}>Services</p>
+              <div className="grid grid-cols-1 gap-y-2 text-[13px] text-[#555] min-[420px]:grid-cols-2 min-[420px]:gap-x-4">
+                <p>Business Banking</p>
+                <p>SME Portfolio Management</p>
+                <p>Corporate Financial Solutions</p>
+                <p>Credit Facility Management</p>
+              </div>
             </div>
           </div>
 
@@ -545,8 +553,8 @@ export default function Home() {
 
         {/* Association strip */}
         <div className="border-t border-[#eeeeee]">
-          <div className="max-w-5xl mx-auto px-8 py-5">
-            <div className={`${softRevealClass} flex items-center justify-center gap-8 py-4 flex-wrap`} style={revealStyle(420, 1000)}>
+          <div className="max-w-5xl mx-auto px-5 sm:px-8 py-4 sm:py-5">
+            <div className={`${softRevealClass} flex items-center justify-center gap-x-5 gap-y-3 py-3 sm:gap-8 sm:py-4 flex-wrap`} style={revealStyle(420, 1000)}>
               {["Sampath Bank", "Nations Trust Bank", "IBSL", "Relationship Management", "SME Portfolio"].map((item) => (
                 <span
                   key={item}
@@ -563,19 +571,19 @@ export default function Home() {
       </section>
 
       {/* â”€â”€ MY ADVANTAGE â”€â”€ */}
-      <section className="bg-white py-20">
-        <div className="max-w-5xl mx-auto px-8">
+      <section className="bg-white py-16 sm:py-20">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <h2
-            className={`${revealClass} text-center mb-14`}
+            className={`${revealClass} text-center mb-12 sm:mb-14`}
             style={{ ...revealStyle(120), fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.75rem", fontWeight: 500, color: "#111" }}
           >
             My Advantage
           </h2>
-          <div className="flex justify-center gap-x-20 gap-y-12 flex-wrap">
+          <div className="flex justify-center gap-x-8 gap-y-10 sm:gap-x-20 sm:gap-y-12 flex-wrap">
             <SkillCircle
               label="Credit Management"
               pct={95}
-              className={`${revealClass} flex min-w-[180px] flex-col items-center gap-3 text-center`}
+              className={`${revealClass} flex min-w-[150px] flex-col items-center gap-3 text-center sm:min-w-[180px]`}
               style={revealStyle(200)}
               icon={
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -586,7 +594,7 @@ export default function Home() {
             <SkillCircle
               label="Portfolio Management"
               pct={92}
-              className={`${revealClass} flex min-w-[180px] flex-col items-center gap-3 text-center`}
+              className={`${revealClass} flex min-w-[150px] flex-col items-center gap-3 text-center sm:min-w-[180px]`}
               style={revealStyle(280)}
               icon={
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -597,7 +605,7 @@ export default function Home() {
             <SkillCircle
               label="Client Relations"
               pct={98}
-              className={`${revealClass} flex min-w-[180px] flex-col items-center gap-3 text-center`}
+              className={`${revealClass} flex min-w-[150px] flex-col items-center gap-3 text-center sm:min-w-[180px]`}
               style={revealStyle(360)}
               icon={
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -613,15 +621,15 @@ export default function Home() {
       <div className="border-t border-[#eeeeee]" />
 
       {/* â”€â”€ EDUCATION & EXPERIENCE â”€â”€ */}
-      <section id="experience" className="scroll-mt-14 py-20">
-        <div className="max-w-6xl mx-auto px-8">
+      <section id="experience" className="scroll-mt-14 py-16 sm:py-20">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className={`${revealClass} max-w-3xl`} style={revealStyle(120)}>
             <p className="mb-4 text-[#999] uppercase" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>
               Career Journey
             </p>
             <h2
               className="mb-5"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontStyle: "italic", fontWeight: 400, color: "#111", lineHeight: 1.08 }}
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 8vw, 3rem)", fontStyle: "italic", fontWeight: 400, color: "#111", lineHeight: 1.08 }}
             >
               Education and
               <br />
@@ -632,7 +640,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={`${revealClass} mt-12 grid gap-6 border-y border-[#e9e6df] py-6 md:grid-cols-3`} style={revealStyle(180)}>
+          <div className={`${revealClass} mt-10 sm:mt-12 grid gap-5 border-y border-[#e9e6df] py-6 md:grid-cols-3 sm:gap-6`} style={revealStyle(180)}>
             <div>
               <p className="mb-2 text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>Current Role</p>
               <p className="text-[15px] font-semibold text-[#111]">{currentRole.title}</p>
@@ -650,7 +658,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-14 xl:grid-cols-[0.78fr_1.22fr] xl:gap-16">
+          <div className="mt-10 grid gap-12 sm:mt-12 sm:gap-14 xl:grid-cols-[0.78fr_1.22fr] xl:gap-16">
             <div className={`${revealClass}`} style={revealStyle(220)}>
               <div className="border-t border-[#e9e6df] pt-6">
                 <p className="mb-6 text-[#999] uppercase" style={{ fontSize: "10px", letterSpacing: "0.16em" }}>
@@ -721,8 +729,8 @@ export default function Home() {
       </section>
 
       {/* â”€â”€ MY LATEST WORK â”€â”€ */}
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-8">
+      <section className="py-16 sm:py-20">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <h2
             className={`${revealClass} text-center mb-12`}
             style={{ ...revealStyle(120), fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 500, color: "#111" }}
@@ -755,8 +763,8 @@ export default function Home() {
       </section>
 
       {/* â”€â”€ FOOTER / CONTACT â”€â”€ */}
-      <footer id="contact" className="scroll-mt-14 border-t border-[#eeeeee] pt-20 pb-10">
-        <div className="max-w-5xl mx-auto px-8">
+      <footer id="contact" className="scroll-mt-14 border-t border-[#eeeeee] pt-16 sm:pt-20 pb-10">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8">
 
           <div className="grid grid-cols-1 md:grid-cols-[1.35fr_0.9fr] gap-14 md:gap-16 mb-14 items-start">
             <div className={`${revealClass}`} style={revealStyle(160)}>
@@ -797,19 +805,19 @@ export default function Home() {
               </div>
             </div>
             <div className={`${revealClass} md:pl-12`} style={revealStyle(220)}>
-              <div className="grid grid-cols-[96px_1fr] gap-4 border-t border-[#e9e6df] py-4">
+              <div className="grid grid-cols-1 gap-1 border-t border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
                 <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Base</p>
                 <p className="text-[14px] leading-relaxed text-[#111]">Colombo 5, Sri Lanka</p>
               </div>
-              <div className="grid grid-cols-[96px_1fr] gap-4 border-t border-[#e9e6df] py-4">
+              <div className="grid grid-cols-1 gap-1 border-t border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
                 <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Email</p>
                 <a href="mailto:rasikekulawela@gmail.com" className="text-[14px] text-[#111] transition-colors hover:text-[#666]">rasikekulawela@gmail.com</a>
               </div>
-              <div className="grid grid-cols-[96px_1fr] gap-4 border-t border-[#e9e6df] py-4">
+              <div className="grid grid-cols-1 gap-1 border-t border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
                 <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Phone</p>
                 <a href="tel:+94777284911" className="text-[14px] text-[#111] transition-colors hover:text-[#666]">(+94) 777 284 911</a>
               </div>
-              <div className="grid grid-cols-[96px_1fr] gap-4 border-y border-[#e9e6df] py-4">
+              <div className="grid grid-cols-1 gap-1 border-y border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
                 <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Profile</p>
                 <a href={linkedInUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[14px] text-[#111] transition-colors hover:text-[#666]">
                   LinkedIn Profile
@@ -819,7 +827,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={`${softRevealClass} border-t border-[#eeeeee] pt-7 flex flex-col md:flex-row items-center justify-between gap-4`} style={revealStyle(300, 720)}>
+          <div className={`${softRevealClass} border-t border-[#eeeeee] pt-7 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left`} style={revealStyle(300, 720)}>
             <div className="flex items-center gap-4 text-center md:text-left">
               <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic", fontSize: "1.1rem", color: "#111" }}>
                 Rasika
@@ -828,7 +836,7 @@ export default function Home() {
                 Relationship Manager, Sampath Bank
               </span>
             </div>
-            <div className="flex gap-7 flex-wrap justify-center">
+            <div className="flex gap-4 sm:gap-7 flex-wrap justify-center">
               {(["About", "Experience", "Contact"] as const).map((l) => (
                 <a
                   key={l}

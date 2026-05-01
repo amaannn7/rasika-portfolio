@@ -135,6 +135,14 @@ html {
   white-space: nowrap;
 }
 
+@media (max-width: 639px) {
+  .typewriter-line {
+    animation: none !important;
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+
 .surface-card {
   border: 1px solid rgba(17, 17, 17, 0.08);
   background: rgba(255, 255, 255, 0.84);
