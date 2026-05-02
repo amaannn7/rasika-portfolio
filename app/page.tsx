@@ -43,6 +43,18 @@ const careerTimeline: CareerItem[] = [
   { period: "Nov 2025-Present", title: "Relationship Manager", org: "Sampath Bank" },
 ];
 
+const orgLogos: Record<string, string> = {
+  "Nations Trust Bank": "/ntb.png",
+  "Thalawathugoda Branch": "/ntb.png",
+  "Qatar": "/ntb.png",
+  "Battaramulla Branch": "/ntb.png",
+  "Cinnamon Gardens": "/ntb.png",
+  "Banking Services Div.": "/ntb.png",
+  "Union Place Branch": "/ntb.png",
+  "Kollupitiya Branch": "/ntb.png",
+  "Sampath Bank": "/sampath.png",
+};
+
 const heroHeadlineLines: TypewriterLine[] = [
   { text: "Rasika Nilnuwan" },
   { text: "Kekulawela" },
@@ -200,12 +212,14 @@ function SkillCircle({
   label,
   pct,
   icon,
+  color = "#1565C0",
   className = "",
   style,
 }: {
   label: string;
   pct: number;
   icon: ReactNode;
+  color?: string;
   className?: string;
   style?: CSSProperties;
 }) {
@@ -222,16 +236,16 @@ function SkillCircle({
             cx={c}
             cy={c}
             r={r}
-            stroke="#111111"
+            stroke={color}
             strokeWidth="5"
             strokeDasharray={`${fill} ${circ}`}
             strokeLinecap="round"
             transform={`rotate(-90 ${c} ${c})`}
           />
         </svg>
-        <div className="absolute inset-0 flex items-center justify-center text-[#111]">{icon}</div>
+        <div className="absolute inset-0 flex items-center justify-center" style={{ color }}>{icon}</div>
       </div>
-      <p className="text-xl font-bold text-[#111]">{pct}%</p>
+      <p className="text-xl font-bold" style={{ color }}>{pct}%</p>
       <p
         className="text-center leading-snug"
         style={{ fontSize: "10px", letterSpacing: "0.14em", textTransform: "uppercase", color: "#999" }}
@@ -474,7 +488,7 @@ export default function Home() {
                       fontSize: "2.6rem",
                       fontWeight: 600,
                       lineHeight: 1,
-                      color: "#111",
+                      color: "#1565C0",
                     }}
                   >
                     <AnimatedStatValue
@@ -510,7 +524,7 @@ export default function Home() {
               {heroStats.map((s, index) => (
                 <div key={s.label} className={`${statClass} ${revealClass} ${index === 0 ? "border-t-0 pt-0" : ""}`} style={revealStyle(220 + index * 90)}>
                   <p className="text-[#999] text-[9px] uppercase tracking-[0.2em] mb-1">{s.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.9rem", fontWeight: 600, color: "#111" }}>
+                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.9rem", fontWeight: 600, color: "#1565C0" }}>
                     <AnimatedStatValue
                       value={s.value}
                       prefix={s.prefix}
@@ -555,13 +569,29 @@ export default function Home() {
         <div className="border-t border-[#eeeeee]">
           <div className="max-w-5xl mx-auto px-5 sm:px-8 py-4 sm:py-5">
             <div className={`${softRevealClass} flex items-center justify-center gap-x-5 gap-y-3 py-3 sm:gap-8 sm:py-4 flex-wrap`} style={revealStyle(420, 1000)}>
-              {["Sampath Bank", "Nations Trust Bank", "IBSL", "Relationship Management", "SME Portfolio"].map((item) => (
-                <span
-                  key={item}
-                  className="font-semibold text-[#cccccc] transition-colors hover:text-[#777777]"
-                  style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase" }}
-                >
-                  {item}
+              {([
+                { label: "Sampath Bank", logo: "/sampath.png" },
+                { label: "Nations Trust Bank", logo: "/ntb.png" },
+                { label: "IBSL", logo: null },
+                { label: "Relationship Management", logo: null },
+                { label: "SME Portfolio", logo: null },
+              ] as { label: string; logo: string | null }[]).map((item) => (
+                <span key={item.label} className="inline-flex items-center gap-1.5">
+                  {item.logo && (
+                    <Image
+                      src={item.logo}
+                      alt={item.label}
+                      width={18}
+                      height={18}
+                      className="object-contain opacity-55 hover:opacity-85 transition-opacity"
+                    />
+                  )}
+                  <span
+                    className="font-semibold text-[#cccccc] transition-colors hover:text-[#777777]"
+                    style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase" }}
+                  >
+                    {item.label}
+                  </span>
                 </span>
               ))}
             </div>
@@ -571,7 +601,7 @@ export default function Home() {
       </section>
 
       {/* â”€â”€ MY ADVANTAGE â”€â”€ */}
-      <section className="bg-white py-16 sm:py-20">
+      <section className="py-16 sm:py-20" style={{ backgroundColor: "#F0F7FF" }}>
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <h2
             className={`${revealClass} text-center mb-12 sm:mb-14`}
@@ -583,6 +613,7 @@ export default function Home() {
             <SkillCircle
               label="Credit Management"
               pct={95}
+              color="#1565C0"
               className={`${revealClass} flex min-w-[150px] flex-col items-center gap-3 text-center sm:min-w-[180px]`}
               style={revealStyle(200)}
               icon={
@@ -594,6 +625,7 @@ export default function Home() {
             <SkillCircle
               label="Portfolio Management"
               pct={92}
+              color="#2E7D32"
               className={`${revealClass} flex min-w-[150px] flex-col items-center gap-3 text-center sm:min-w-[180px]`}
               style={revealStyle(280)}
               icon={
@@ -605,6 +637,7 @@ export default function Home() {
             <SkillCircle
               label="Client Relations"
               pct={98}
+              color="#C62828"
               className={`${revealClass} flex min-w-[150px] flex-col items-center gap-3 text-center sm:min-w-[180px]`}
               style={revealStyle(360)}
               icon={
@@ -624,7 +657,7 @@ export default function Home() {
       <section id="experience" className="scroll-mt-14 py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className={`${revealClass} max-w-3xl`} style={revealStyle(120)}>
-            <p className="mb-4 text-[#999] uppercase" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>
+            <p className="mb-4 uppercase" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "#1565C0", fontWeight: 600 }}>
               Career Journey
             </p>
             <h2
@@ -698,9 +731,21 @@ export default function Home() {
                         <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>
                           {currentRole.period}
                         </p>
-                        <div>
+                        <div className="border-l-2 border-[#E31837] pl-3">
                           <p className="text-[15px] font-semibold leading-snug text-[#111]">{currentRole.title}</p>
-                          <p className="mt-1 text-[13px] text-[#777]">{currentRole.org}</p>
+                          <div className="mt-1 flex items-center gap-2">
+                            {orgLogos[currentRole.org] && (
+                              <Image
+                                src={orgLogos[currentRole.org]}
+                                alt={currentRole.org}
+                                width={28}
+                                height={28}
+                                className="object-contain flex-shrink-0"
+                                style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.12))" }}
+                              />
+                            )}
+                            <p className="text-[13px] text-[#777]">{currentRole.org}</p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -713,7 +758,18 @@ export default function Home() {
                           </p>
                           <div>
                             <p className="text-[15px] font-semibold leading-snug text-[#111]">{item.title}</p>
-                            <p className="mt-1 text-[13px] text-[#777]">{item.org}</p>
+                            <div className="mt-1 flex items-center gap-2">
+                              {orgLogos[item.org] && (
+                                <Image
+                                  src={orgLogos[item.org]}
+                                  alt={item.org}
+                                  width={22}
+                                  height={22}
+                                  className="object-contain flex-shrink-0 opacity-70"
+                                />
+                              )}
+                              <p className="text-[13px] text-[#777]">{item.org}</p>
+                            </div>
                           </div>
                         </div>
                       ))}
@@ -729,7 +785,7 @@ export default function Home() {
       </section>
 
       {/* â”€â”€ MY LATEST WORK â”€â”€ */}
-      <section className="py-16 sm:py-20">
+      <section className="py-16 sm:py-20" style={{ backgroundColor: "#FFFBF5" }}>
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
           <h2
             className={`${revealClass} text-center mb-12`}
