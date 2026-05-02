@@ -332,9 +332,9 @@ export default function Home() {
           <div className="flex shrink-0 flex-col items-center">
             <div
               className="flex items-center justify-center mb-0.5"
-              style={{ width: 30, height: 30, border: "1.5px solid #111" }}
+              style={{ width: 30, height: 30, background: "#1565C0", border: "1.5px solid #1565C0" }}
             >
-              <span className="text-[11px] font-bold tracking-tight">R</span>
+              <span className="text-[11px] font-bold tracking-tight text-white">R</span>
             </div>
             <span className="text-center text-[7px] font-bold tracking-[0.14em] uppercase text-[#111] min-[420px]:text-[8px] min-[420px]:tracking-[0.18em]">
               RASIKA KEKULAWELA
@@ -612,12 +612,14 @@ export default function Home() {
       {/* â”€â”€ MY ADVANTAGE â”€â”€ */}
       <section className="py-16 sm:py-20" style={{ backgroundColor: "#F0F7FF" }}>
         <div className="max-w-5xl mx-auto px-5 sm:px-8">
-          <h2
-            className={`${revealClass} text-center mb-12 sm:mb-14`}
-            style={{ ...revealStyle(120), fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.75rem", fontWeight: 500, color: "#111" }}
-          >
-            My Advantage
-          </h2>
+          <div className={`${revealClass} text-center mb-12 sm:mb-14`} style={revealStyle(80)}>
+            <p className="mb-2 uppercase font-bold" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "#1565C0" }}>Skills &amp; Expertise</p>
+            <h2
+              style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.75rem", fontWeight: 500, color: "#111" }}
+            >
+              My Advantage
+            </h2>
+          </div>
           <div className="flex justify-center gap-x-8 gap-y-10 sm:gap-x-20 sm:gap-y-12 flex-wrap">
             <SkillCircle
               label="Credit Management"
@@ -815,7 +817,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="pt-4">
-                  <p className="text-[#999]" style={{ fontSize: "10px", letterSpacing: "0.12em", textTransform: "uppercase" }}>{item.cat}</p>
+                  <p className="font-semibold" style={{ fontSize: "10px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#1565C0" }}>{item.cat}</p>
                   <p className="text-[14px] font-semibold text-[#111] mt-1">{item.title}</p>
                 </div>
               </div>
@@ -830,7 +832,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-[1.35fr_0.9fr] gap-14 md:gap-16 mb-14 items-start">
             <div className={`${revealClass}`} style={revealStyle(160)}>
-              <p className="mb-5 text-[#999] uppercase" style={{ fontSize: "10px", letterSpacing: "0.18em" }}>
+              <p className="mb-5 uppercase font-semibold" style={{ fontSize: "10px", letterSpacing: "0.18em", color: "#1565C0" }}>
                 Open for meaningful conversations
               </p>
               <h3
@@ -852,15 +854,15 @@ export default function Home() {
                 Available for relationship-led banking, portfolio growth, and strategic client development across modern financial teams.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <a href="mailto:rasikekulawela@gmail.com" className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#111] transition-colors hover:text-[#666]">
+                <a href="mailto:rasikekulawela@gmail.com" className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] transition-colors hover:opacity-70" style={{ color: "#1565C0" }}>
                   Email
                   <span aria-hidden="true">↗</span>
                 </a>
-                <a href="tel:+94777284911" className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#111] transition-colors hover:text-[#666]">
+                <a href="tel:+94777284911" className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] transition-colors hover:opacity-70" style={{ color: "#1565C0" }}>
                   Call
                   <span aria-hidden="true">↗</span>
                 </a>
-                <a href={linkedInUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#111] transition-colors hover:text-[#666]">
+                <a href={linkedInUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] transition-colors hover:opacity-70" style={{ color: "#1565C0" }}>
                   LinkedIn
                   <span aria-hidden="true">↗</span>
                 </a>
@@ -868,19 +870,19 @@ export default function Home() {
             </div>
             <div className={`${revealClass} md:pl-12`} style={revealStyle(220)}>
               <div className="grid grid-cols-1 gap-1 border-t border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
-                <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Base</p>
+                <p className="uppercase font-semibold" style={{ fontSize: "9px", letterSpacing: "0.2em", color: "#1565C0" }}>Base</p>
                 <p className="text-[14px] leading-relaxed text-[#111]">Colombo 5, Sri Lanka</p>
               </div>
               <div className="grid grid-cols-1 gap-1 border-t border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
-                <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Email</p>
+                <p className="uppercase font-semibold" style={{ fontSize: "9px", letterSpacing: "0.2em", color: "#1565C0" }}>Email</p>
                 <a href="mailto:rasikekulawela@gmail.com" className="text-[14px] text-[#111] transition-colors hover:text-[#666]">rasikekulawela@gmail.com</a>
               </div>
               <div className="grid grid-cols-1 gap-1 border-t border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
-                <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Phone</p>
+                <p className="uppercase font-semibold" style={{ fontSize: "9px", letterSpacing: "0.2em", color: "#1565C0" }}>Phone</p>
                 <a href="tel:+94777284911" className="text-[14px] text-[#111] transition-colors hover:text-[#666]">(+94) 777 284 911</a>
               </div>
               <div className="grid grid-cols-1 gap-1 border-y border-[#e9e6df] py-4 sm:grid-cols-[96px_1fr] sm:gap-4">
-                <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.2em" }}>Profile</p>
+                <p className="uppercase font-semibold" style={{ fontSize: "9px", letterSpacing: "0.2em", color: "#1565C0" }}>Profile</p>
                 <a href={linkedInUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[14px] text-[#111] transition-colors hover:text-[#666]">
                   LinkedIn Profile
                   <span aria-hidden="true">↗</span>
@@ -891,10 +893,10 @@ export default function Home() {
 
           <div className={`${softRevealClass} border-t border-[#eeeeee] pt-7 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left`} style={revealStyle(300, 720)}>
             <div className="flex items-center gap-4 text-center md:text-left">
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic", fontSize: "1.1rem", color: "#111" }}>
+              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontStyle: "italic", fontSize: "1.1rem", color: "#1565C0", fontWeight: 600 }}>
                 Rasika
               </span>
-              <span className="hidden md:inline-block text-[#c2beb6]" style={{ fontSize: "11px", letterSpacing: "0.16em", textTransform: "uppercase" }}>
+              <span className="hidden md:inline-block" style={{ fontSize: "11px", letterSpacing: "0.16em", textTransform: "uppercase", color: "#999" }}>
                 Relationship Manager, Sampath Bank
               </span>
             </div>
@@ -910,7 +912,7 @@ export default function Home() {
                 </a>
               ))}
             </div>
-            <p style={{ fontSize: "11px", color: "#bbb" }}>© 2025. All Rights Reserved</p>
+            <p style={{ fontSize: "11px", color: "#bbb" }}>© 2026. All Rights Reserved</p>
           </div>
 
         </div>
