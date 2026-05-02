@@ -382,17 +382,26 @@ export default function Home() {
       </nav>
 
       {/* â”€â”€ HERO â”€â”€ */}
-      <section id="about" className="pt-14">
+      <section id="about" className="pt-14" style={{ background: "linear-gradient(150deg, #FFF4E6 0%, #EBF4FF 55%, #FFFFFF 82%)" }}>
 
         {/* Large serif heading — centered */}
         <div className={`${revealClass} max-w-4xl mx-auto px-5 sm:px-8 pt-12 sm:pt-16 pb-6 sm:pb-10 text-center`} style={revealStyle(120)}>
+          <div className="mb-5 flex justify-center">
+            <span
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-white"
+              style={{ background: "linear-gradient(90deg, #1565C0 0%, #0D47A1 100%)", fontSize: "10px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase" }}
+            >
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FFB300", display: "inline-block", flexShrink: 0 }} />
+              Banking Professional · Sri Lanka
+            </span>
+          </div>
           <h1
             style={{
               fontFamily: "var(--font-playfair), Georgia, 'Times New Roman', serif",
               fontWeight: 600,
               fontSize: "clamp(1.45rem, 6.2vw, 2.9rem)",
               lineHeight: 1.2,
-              color: "#111",
+              color: "#0A2240",
             }}
           >
             <TypewriterHeading lines={heroHeadlineLines} />
@@ -408,7 +417,7 @@ export default function Home() {
             {/* LEFT */}
             <div className="justify-self-start space-y-6 pr-4 md:-ml-6 lg:-ml-10">
               <div className={`${revealClass} border-b border-[#e9e6df] pb-6`} style={revealStyle(180)}>
-                <p className="text-[#999] mb-3 uppercase tracking-[0.2em]" style={{ fontSize: "9px" }}>Biography</p>
+                <p className="mb-3 uppercase tracking-[0.2em]" style={{ fontSize: "9px", color: "#1565C0", fontWeight: 600 }}>Biography</p>
                 <p className="text-[13px] text-[#555] leading-relaxed">
                   Work for clients and build long-term financial relationships. I&apos;m Rasika, a Business
                   Banking professional based in Sri Lanka, currently serving as a Relationship Manager at
@@ -416,7 +425,7 @@ export default function Home() {
                 </p>
               </div>
               <div className={`${revealClass} border-b border-[#e9e6df] pb-6`} style={revealStyle(260)}>
-                <p className="text-[#999] mb-3 uppercase tracking-[0.2em]" style={{ fontSize: "9px" }}>Contact</p>
+                <p className="mb-3 uppercase tracking-[0.2em]" style={{ fontSize: "9px", color: "#1565C0", fontWeight: 600 }}>Contact</p>
                 <div className="space-y-1 text-[13px] text-[#555]">
                   <p>Colombo 5, Sri Lanka</p>
                   <a href="mailto:rasikekulawela@gmail.com" className="block hover:text-[#111] transition-colors">rasikekulawela@gmail.com</a>
@@ -430,7 +439,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={`${revealClass} pb-1`} style={revealStyle(340)}>
-                <p className="text-[#999] mb-3 uppercase tracking-[0.2em]" style={{ fontSize: "9px" }}>Services</p>
+                <p className="mb-3 uppercase tracking-[0.2em]" style={{ fontSize: "9px", color: "#1565C0", fontWeight: 600 }}>Services</p>
                 <div className="space-y-1 text-[13px] text-[#555]">
                   <p>Business Banking</p>
                   <p>SME Portfolio Management</p>
@@ -547,13 +556,13 @@ export default function Home() {
               </a>
             </div>
             <div className="border-t border-[#e9e6df] pt-5">
-              <p className="mb-3 text-[#999] uppercase tracking-[0.2em]" style={{ fontSize: "9px" }}>Biography</p>
+              <p className="mb-3 uppercase tracking-[0.2em] font-semibold" style={{ fontSize: "9px", color: "#1565C0" }}>Biography</p>
               <p className="text-[13px] leading-relaxed text-[#555]">
                 Rasika is a business banking professional focused on long-term client relationships, SME portfolio growth, and practical financial solutions.
               </p>
             </div>
             <div className="border-t border-[#e9e6df] pt-5">
-              <p className="mb-3 text-[#999] uppercase tracking-[0.2em]" style={{ fontSize: "9px" }}>Services</p>
+              <p className="mb-3 uppercase tracking-[0.2em] font-semibold" style={{ fontSize: "9px", color: "#1565C0" }}>Services</p>
               <div className="grid grid-cols-1 gap-y-2 text-[13px] text-[#555] min-[420px]:grid-cols-2 min-[420px]:gap-x-4">
                 <p>Business Banking</p>
                 <p>SME Portfolio Management</p>
@@ -675,17 +684,17 @@ export default function Home() {
 
           <div className={`${revealClass} mt-10 sm:mt-12 grid gap-5 border-y border-[#e9e6df] py-6 md:grid-cols-3 sm:gap-6`} style={revealStyle(180)}>
             <div>
-              <p className="mb-2 text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>Current Role</p>
+              <p className="mb-2 uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em", color: "#C62828", fontWeight: 600 }}>Current Role</p>
               <p className="text-[15px] font-semibold text-[#111]">{currentRole.title}</p>
               <p className="mt-1 text-[13px] text-[#777]">{currentRole.org} · {currentRole.period}</p>
             </div>
             <div>
-              <p className="mb-2 text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>Career Span</p>
+              <p className="mb-2 uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em", color: "#2E7D32", fontWeight: 600 }}>Career Span</p>
               <p className="text-[15px] font-semibold text-[#111]">2008 - Present</p>
               <p className="mt-1 text-[13px] text-[#777]">17+ years across business development, SME portfolios, and business banking.</p>
             </div>
             <div>
-              <p className="mb-2 text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>Core Focus</p>
+              <p className="mb-2 uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em", color: "#1565C0", fontWeight: 600 }}>Core Focus</p>
               <p className="text-[15px] font-semibold text-[#111]">Relationship-led growth</p>
               <p className="mt-1 text-[13px] text-[#777]">Client retention, credit-backed strategy, and portfolio expansion for modern banking teams.</p>
             </div>
@@ -694,86 +703,83 @@ export default function Home() {
           <div className="mt-10 grid gap-12 sm:mt-12 sm:gap-14 xl:grid-cols-[0.78fr_1.22fr] xl:gap-16">
             <div className={`${revealClass}`} style={revealStyle(220)}>
               <div className="border-t border-[#e9e6df] pt-6">
-                <p className="mb-6 text-[#999] uppercase" style={{ fontSize: "10px", letterSpacing: "0.16em" }}>
+                <p className="mb-6 uppercase font-semibold" style={{ fontSize: "10px", letterSpacing: "0.16em", color: "#1565C0" }}>
                   Education
                 </p>
                 <div className="space-y-6">
-                  {eduItems.map((item) => (
-                    <div key={item.title} className="border-b border-[#f1eee8] pb-6 last:border-b-0 last:pb-0">
-                      <p className="mb-2 text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>
-                        {item.label}
-                      </p>
-                      <p className="text-[15px] font-semibold leading-snug text-[#111]">{item.title}</p>
-                      <p className="mt-1 text-[13px] text-[#777]">{item.org}</p>
-                    </div>
-                  ))}
+                  {eduItems.map((item, index) => {
+                    const labelColor = (["#1565C0", "#2E7D32", "#E65100"] as string[])[index] ?? "#1565C0";
+                    return (
+                      <div key={item.title} className="border-b border-[#f1eee8] pb-6 last:border-b-0 last:pb-0" style={{ borderLeftColor: labelColor }}>
+                        <div className="mb-2 flex items-center gap-1.5">
+                          <span style={{ width: 6, height: 6, borderRadius: "50%", background: labelColor, flexShrink: 0, display: "inline-block" }} />
+                          <p className="uppercase font-semibold" style={{ fontSize: "9px", letterSpacing: "0.18em", color: labelColor }}>
+                            {item.label}
+                          </p>
+                        </div>
+                        <p className="text-[15px] font-semibold leading-snug text-[#111]">{item.title}</p>
+                        <p className="mt-1 text-[13px] text-[#777]">{item.org}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
 
             <div className={`${revealClass}`} style={revealStyle(280)}>
               <div className="border-t border-[#e9e6df] pt-6">
-                <div className="grid gap-4 md:grid-cols-[160px_1fr] md:items-start">
-                  <div>
-                    <p className="text-[#999] uppercase" style={{ fontSize: "10px", letterSpacing: "0.16em" }}>
+                <div>
+                  <div className="mb-4 flex items-center justify-between border-b border-[#e9e6df] pb-3">
+                    <p className="uppercase font-semibold" style={{ fontSize: "10px", letterSpacing: "0.16em", color: "#1565C0" }}>
                       Professional Experience
                     </p>
-                    <p className="mt-3 text-[13px] leading-relaxed text-[#777]">
-                      From entry-level development roles to relationship management and business banking leadership.
-                    </p>
+                    <p className="text-[10px] text-[#aaa]">2008 – Present</p>
                   </div>
-                  <div>
-                    <div className="border-b border-[#e9e6df] pb-6">
-                      <p className="mb-2 text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>
-                        Current Appointment
-                      </p>
-                      <div className="grid gap-3 sm:grid-cols-[130px_1fr] sm:gap-5">
-                        <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>
-                          {currentRole.period}
-                        </p>
-                        <div className="border-l-2 border-[#E31837] pl-3">
-                          <p className="text-[15px] font-semibold leading-snug text-[#111]">{currentRole.title}</p>
-                          <div className="mt-1 flex items-center gap-2">
-                            {orgLogos[currentRole.org] && (
-                              <Image
-                                src={orgLogos[currentRole.org]}
-                                alt={currentRole.org}
-                                width={28}
-                                height={28}
-                                className="object-contain flex-shrink-0"
-                                style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.12))" }}
-                              />
-                            )}
-                            <p className="text-[13px] text-[#777]">{currentRole.org}</p>
-                          </div>
-                        </div>
+
+                  <div className="border-b border-[#e9e6df] pb-5 mb-1">
+                    <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] mb-3" style={{ background: "#FFF0F0", color: "#C62828" }}>
+                      <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#E31837", display: "inline-block" }} />
+                      Current · {currentRole.period}
+                    </span>
+                    <div className="border-l-2 border-[#E31837] pl-3">
+                      <p className="text-[15px] font-semibold leading-snug text-[#111]">{currentRole.title}</p>
+                      <div className="mt-1 flex items-center gap-2">
+                        {orgLogos[currentRole.org] && (
+                          <Image
+                            src={orgLogos[currentRole.org]}
+                            alt={currentRole.org}
+                            width={28}
+                            height={18}
+                            className="object-contain flex-shrink-0"
+                            style={{ filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.12))" }}
+                          />
+                        )}
+                        <p className="text-[13px] text-[#777]">{currentRole.org}</p>
                       </div>
                     </div>
+                  </div>
 
-                    <div className="pt-2">
-                      {previousRoles.map((item) => (
-                        <div key={`${item.period}-${item.title}`} className="grid gap-3 border-b border-[#f1eee8] py-5 sm:grid-cols-[130px_1fr] sm:gap-5">
-                          <p className="text-[#999] uppercase" style={{ fontSize: "9px", letterSpacing: "0.18em" }}>
-                            {item.period}
-                          </p>
-                          <div>
-                            <p className="text-[15px] font-semibold leading-snug text-[#111]">{item.title}</p>
-                            <div className="mt-1 flex items-center gap-2">
-                              {orgLogos[item.org] && (
-                                <Image
-                                  src={orgLogos[item.org]}
-                                  alt={item.org}
-                                  width={22}
-                                  height={22}
-                                  className="object-contain flex-shrink-0 opacity-70"
-                                />
-                              )}
-                              <p className="text-[13px] text-[#777]">{item.org}</p>
-                            </div>
-                          </div>
+                  <div>
+                    {previousRoles.map((item) => (
+                      <div key={`${item.period}-${item.title}`} className="border-b border-[#f1eee8] py-3.5">
+                        <span className="inline-flex items-center rounded-full px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-[0.12em] mb-1.5" style={{ background: "#EFF6FF", color: "#1565C0" }}>
+                          {item.period}
+                        </span>
+                        <p className="text-[14px] font-semibold leading-snug text-[#111]">{item.title}</p>
+                        <div className="mt-1 flex items-center gap-1.5">
+                          {orgLogos[item.org] && (
+                            <Image
+                              src={orgLogos[item.org]}
+                              alt={item.org}
+                              width={20}
+                              height={13}
+                              className="object-contain flex-shrink-0 opacity-70"
+                            />
+                          )}
+                          <p className="text-[12px] text-[#777]">{item.org}</p>
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
